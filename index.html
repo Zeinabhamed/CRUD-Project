@@ -1,0 +1,66 @@
+<html>
+<head>
+       
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="js/bootstrap.min.js">
+</head>
+
+<body>
+
+
+    <div class="container py-5">
+
+<div class="form-group ">
+    <label for="ProductNameInput">ProductName</label>
+    <input class="form-control" type="text" id="productNameInput">
+</div>
+
+<div class="form-group">
+    <label for="ProductPriceInput">ProductPrice</label>
+    <input class="form-control" type="number" id="productPriceInput">
+</div>
+
+<div class="form-group">
+    <label for="ProductCategoryInput">ProductCategory</label>
+    <input class="form-control" type="text" id="productCategoryInput">
+</div>
+
+<div class="form-group">
+    <label for="ProductDescriptionInput">ProductDescription</label>
+   <textarea class="form-control" type="text" id="productDescriptionInput"></textarea> 
+</div>
+
+    <button class="btn btn-outline-info" type="button" onclick="addProduct()">
+        Add Product
+      </button>
+         </div>
+<div class="container">
+
+           <div class="form-group w-75 m-auto">
+    <input onkeyup="searchProduct(this.value)" placeholder=search class="form-control" type="text" id="productNameInput">
+</div>
+         <table class="table  m-top-10">
+
+            <thead>
+           <th>index</th>
+           <th>productName</th>
+           <th>productPrice</th>
+           <th>ProductCategory</th>
+           <th>ProductDescription</th>
+           <th> <button class="btn btn-outline-warning">update</button></th>
+           <th> <button class="btn btn-outline-danger">delete</button></th>
+
+            </thead>
+
+            <tbody id="tablebody">
+       
+            </tbody>
+
+         </table>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
